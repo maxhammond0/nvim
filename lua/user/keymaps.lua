@@ -38,8 +38,8 @@ keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 -- Close buffers
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
--- Better paste
-keymap("v", "p", '"_dP', opts)
+-- Delete trailing whitespace
+keymap("n", "<Leader>w", "<cmd>%s/\\s\\+$//e<CR>", opts)
 
 -- Insert --
 
@@ -47,6 +47,9 @@ keymap("v", "p", '"_dP', opts)
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
+
+-- Better paste
+keymap("v", "p", '"_dP', opts)
 
 -- Plugins --
 

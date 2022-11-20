@@ -21,7 +21,7 @@ return {
     fmt( -- The snippet code actually looks like the equation environment it produces.
       [[
         def main():
-            <>pass
+            <>
         
 
         if __name__ == "__main__":
