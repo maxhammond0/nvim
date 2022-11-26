@@ -1,4 +1,5 @@
 require "user.colorscheme"
+<<<<<<< HEAD
 require "user.keymaps"
 require "user.options"
 require "plugins.alpha"
@@ -24,3 +25,7 @@ require "plugins.telescope"
 require "plugins.toggleterm"
 require "plugins.treesitter"
 require "plugins.vimtex"
+=======
+
+require "user.luasnip"
+>>>>>>> d997dc5 (cleanup)

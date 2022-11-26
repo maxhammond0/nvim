@@ -17,7 +17,7 @@ local postfix = require("luasnip.extras.postfix").postfix
 
 return {
   -- Example: how to set snippet parameters
-  s({trig=";init", dscr="initialized main function"},
+  s({trig="main", dscr="initialized main function"},
     fmt( -- The snippet code actually looks like the equation environment it produces.
       [[
         def main():
