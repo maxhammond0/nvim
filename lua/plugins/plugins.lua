@@ -65,11 +65,11 @@ return packer.startup(function(use)
   use { "nvim-lualine/lualine.nvim" } -- bottom bar
 
   -- cmp plugins
-  use { "hrsh7th/cmp-buffer"} -- buffer completions
-  use { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" }
-  use { "hrsh7th/cmp-nvim-lua" }
-  use { "hrsh7th/cmp-path" } -- path completions
   use { "hrsh7th/nvim-cmp" } -- The completion plugin
+  use { "hrsh7th/cmp-buffer"} -- buffer completions
+  use { "hrsh7th/cmp-nvim-lua" }
+  use { "hrsh7th/cmp-nvim-lsp" }
+  use { "hrsh7th/cmp-path" } -- path completions
   use { "saadparwaiz1/cmp_luasnip" } -- snippet completions
 
   -- snippets
@@ -80,14 +80,11 @@ return packer.startup(function(use)
   use { 'lervag/vimtex' }
 
   -- LSP
-  -- use { "neovim/nvim-lspconfig" } -- enable LSP
-  -- use { "williamboman/nvim-lsp-installer" } -- simple to use language server installer
-  -- use { "williamboman/mason.nvim" }
-  -- use { "williamboman/mason-lspconfig.nvim" }
-  -- use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
-  -- use { "RRethy/vim-illuminate" }
-  -- use { 'mfussenegger/nvim-jdtls' }
-  -- use { "github/copilot.vim" }
+  use { "neovim/nvim-lspconfig" } -- enable LSP
+  use { "williamboman/mason.nvim" } -- language client installer
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
+  use { "github/copilot.vim" }
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim" }
