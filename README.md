@@ -1,10 +1,10 @@
-# My personal configuration for NEOVIM
+# My personal configuration for neovim
 
 ```sh
 git clone https://github.com/max-hammond420/neovim ~/.config/nvim
 ```
 
-## Get healthy
+## check dependencies
 
 Open `nvim` and enter the following:
 
