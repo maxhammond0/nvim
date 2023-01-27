@@ -43,27 +43,24 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
-  use { "numToStr/Comment.nvim" }
+  use { "numToStr/Comment.nvim" } -- keybinded comments
   use { "kyazdani42/nvim-web-devicons" }
   use { "kyazdani42/nvim-tree.lua" }
   use { "moll/vim-bbye" } -- make closing buffers nicer
-  use { "akinsho/toggleterm.nvim" }
+  use { "akinsho/toggleterm.nvim" } -- popup terminal
   use { "ahmedkhalf/project.nvim" }
   use { "lewis6991/impatient.nvim" } -- makes loading time faster
-  use { "lukas-reineke/indent-blankline.nvim" } -- indentation guides
   use { "goolord/alpha-nvim" } -- empty buffer screen
 
   -- Language Specific Plugins
-  use { "mfussenegger/nvim-jdtls" } -- required for jdtls to just work
+  use { "mfussenegger/nvim-jdtls" } -- required for java language server
   use { "MrcJkb/haskell-tools.nvim" } -- haskell
 
   -- Colorschemes
-  use { "ellisonleao/gruvbox.nvim" } -- current colorscheme
-  use { "shaunsingh/solarized.nvim" }
+  use { "ellisonleao/gruvbox.nvim" } -- gruvbox
 
   -- Bars
   use { "akinsho/bufferline.nvim" } -- top bar
@@ -82,17 +79,17 @@ return packer.startup(function(use)
   use { "rafamadriz/friendly-snippets" } -- a bunch of snippets to use
 
   -- LaTeX
-  use { 'lervag/vimtex' }
+  use { 'lervag/vimtex' } -- TeX integration
 
   -- LSP
   use { "neovim/nvim-lspconfig" } -- enable LSP
   use { "williamboman/mason.nvim" } -- language client installer
   use { "williamboman/mason-lspconfig.nvim" }
   use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
-  use { "github/copilot.vim" }
+  use { "github/copilot.vim" } -- cucked by microsoft
 
   -- Telescope
-  use { "nvim-telescope/telescope.nvim" }
+  use { "nvim-telescope/telescope.nvim" } -- fuzzyfinder
 
   -- Treesitter
   use {
