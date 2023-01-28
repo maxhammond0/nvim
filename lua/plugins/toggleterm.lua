@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 toggleterm.setup({
-	size = 20,
+	size = 10,
 	open_mapping = [[<c-\>]],
 	hide_numbers = true,
 	shade_terminals = true,
@@ -12,14 +12,13 @@ toggleterm.setup({
 	start_in_insert = true,
 	insert_mappings = true,
 	persist_size = true,
-	direction = "float",
+	direction = "horizontal",
 	close_on_exit = true,
 	shell = vim.o.shell,
 	float_opts = {
 		border = "curved",
 	},
 })
-
 function _G.set_terminal_keymaps()
   local opts = {noremap = true}
   -- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
@@ -37,4 +36,3 @@ local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
 function _LAZYGIT_TOGGLE()
 	lazygit:toggle()
 end
-
