@@ -41,8 +41,8 @@ packer.init {
   },
 }
 
--- Install your plugins here
 return packer.startup(function(use)
+  -- General plugins
   use { "wbthomason/packer.nvim" } -- Have packer manage itself
   use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
   use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
@@ -54,6 +54,18 @@ return packer.startup(function(use)
   use { "ahmedkhalf/project.nvim" }
   use { "lewis6991/impatient.nvim" } -- makes loading time faster
   use { "goolord/alpha-nvim" } -- empty buffer screen
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end
+  }
 
   -- Language Specific Plugins
   use { "mfussenegger/nvim-jdtls" } -- required for java language server
