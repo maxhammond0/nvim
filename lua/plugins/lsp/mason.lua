@@ -9,7 +9,8 @@ local servers = {
   "yamlls",
   "jdtls",
   "hls",
-  "texlab"
+  "texlab",
+  "solargraph",
 }
 
 local settings = {
