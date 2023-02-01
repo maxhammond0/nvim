@@ -11,6 +11,7 @@ local servers = {
   "hls",
   "texlab",
   "solargraph",
+  "tailwindcss",
 }
 
 local settings = {
