@@ -1,17 +1,18 @@
 local servers = {
-  "sumneko_lua",
-  "cssls",
-  "html",
-  "tsserver",
-  "pyright",
   "bashls",
-  "jsonls",
-  "yamlls",
-  "jdtls",
+  "clangd",
+  "cssls",
   "hls",
-  "texlab",
+  "html",
+  "jdtls",
+  "jsonls",
+  "pyright",
   "solargraph",
+  "sumneko_lua",
   "tailwindcss",
+  "texlab",
+  "tsserver",
+  "yamlls",
 }
 
 local settings = {
