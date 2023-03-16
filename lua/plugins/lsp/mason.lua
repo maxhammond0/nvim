@@ -8,6 +8,7 @@ local servers = {
   "jsonls",
   "lua_ls",
   "pyright",
+  "rubocop",
   "solargraph",
   "tailwindcss",
   "texlab",
