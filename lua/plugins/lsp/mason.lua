@@ -6,6 +6,7 @@ local servers = {
   "html",
   "jdtls",
   "jsonls",
+  "lua_ls",
   "pyright",
   "solargraph",
   "lua_ls",
