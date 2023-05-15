@@ -45,4 +45,5 @@ vim.opt.listchars= "eol:↵,tab:␉·,trail:␠,nbsp:⎵"
 vim.cmd [[
 syntax enable
 colorscheme gruvbox
+autocmd BufNew,BufRead *.asm set ft=nasm
 ]]

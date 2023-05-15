@@ -1,4 +1,5 @@
 local servers = {
+  "asm_lsp",
   "bashls",
   "clangd",
   "cssls",
@@ -7,9 +8,9 @@ local servers = {
   "jdtls",
   "jsonls",
   "lua_ls",
+  "lua_ls",
   "pyright",
   "solargraph",
-  "lua_ls",
   "tailwindcss",
   "texlab",
   "tsserver",
