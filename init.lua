@@ -70,12 +70,10 @@ require("gruvbox").setup({
 })
 
 local colorscheme = "gruvbox"
-
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not status_ok then
   return
 end
-
 
 -------------
 -- Keymaps --
@@ -145,8 +143,8 @@ keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.curren
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
 
 -- Navigate Buffers
-keymap("n", "<>", ":BufferLineMoveNext<CR>", opts) -- TODO think of a keybind
-keymap("n", "<>", ":BufferLineMovePrev<CR>", opts)
+keymap("n", "<S-Right>", ":BufferLineMoveNext<CR>", opts) -- TODO think of a keybind
+keymap("n", "<S-Left>", ":BufferLineMovePrev<CR>", opts)
 keymap("n", "<S-l>", ":BufferLineCycleNext<CR>", opts)
 keymap("n", "<S-h>", ":BufferLineCyclePrev<CR>", opts)
 
@@ -165,6 +163,7 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 -- Load Plugins --
 ------------------
 require "settings.bufferline"
+require "settings.lsp"
 require "settings.lualine"
 require "settings.nvim-tree"
 require "settings.packer"
