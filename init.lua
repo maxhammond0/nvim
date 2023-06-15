@@ -45,6 +45,9 @@ opt.iskeyword:append("-")                   -- treats words with `-` as single w
 opt.list = true
 opt.listchars= "eol:↵,tab:▷,"
 
+-----------------
+-- Colorscheme --
+-----------------
 require("gruvbox").setup({
   undercurl = true,
   underline = true,
@@ -74,14 +77,14 @@ if not status_ok then
 end
 
 
+-------------
+-- Keymaps --
+-------------
+
 -- Shorten function name
 local keymap = vim.keymap.set
 -- Silent keymap option
 local opts = { silent = true }
-
--------------
--- Keymaps --
--------------
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -164,3 +167,5 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 require "settings.packer"
 require "settings.nvim-tree"
 require "settings.bufferline"
+require "settings.lualine"
+require "settings.which-key"
