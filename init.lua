@@ -164,8 +164,9 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 ------------------
 -- Load Plugins --
 ------------------
-require "settings.packer"
-require "settings.nvim-tree"
 require "settings.bufferline"
 require "settings.lualine"
+require "settings.nvim-tree"
+require "settings.packer"
+require "settings.treesitter"
 require "settings.which-key"

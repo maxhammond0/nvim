@@ -2,36 +2,37 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-  -- General plugins
   use { "wbthomason/packer.nvim" }
 
-  use { "ahmedkhalf/project.nvim" } -- Makes searching projects easier
-  use { "akinsho/bufferline.nvim" } -- top bar
-  use { "goolord/alpha-nvim" } -- empty buffer screen
-  use { "nvim-tree/nvim-tree.lua" }
-  use { "kyazdani42/nvim-web-devicons" }
-  use { "lewis6991/gitsigns.nvim" }
-  use { "lewis6991/impatient.nvim" } -- makes loading time faster
-  use { "moll/vim-bbye" } -- make closing buffers nicer
-  use { "numToStr/Comment.nvim" } -- keybinded comments
-  use { "nvim-lua/plenary.nvim" } -- Useful lua functions used by lots of plugins
-  use { "nvim-lualine/lualine.nvim" } -- bottom bar
-  use { "nvim-telescope/telescope.nvim" } -- the best fuzzyfinder
-  use { "windwp/nvim-autopairs" } -- Autopairs, integrates with both cmp and treesitter
-  use { 'TimUntersberger/neogit' }
-
+  -- General plugins
+  use { "ahmedkhalf/project.nvim" }                            -- Makes searching projects easier
+  use { "akinsho/bufferline.nvim" }                            -- Top bar
+  use { "goolord/alpha-nvim" }                                 -- Empty buffer screen
+  use { "nvim-tree/nvim-tree.lua" }                            -- A file explorer
+  use { "kyazdani42/nvim-web-devicons" }                       -- Integrates well with nvim-tree
+  use { "lewis6991/gitsigns.nvim" }                            -- Nice signs
+  use { "lewis6991/impatient.nvim" }                           -- Makes loading time faster
+  use { "moll/vim-bbye" }                                      -- Make closing buffers nicer
+  use { "numToStr/Comment.nvim" }                              -- Keybinded comments
+  use { "nvim-lua/plenary.nvim" }                              -- Useful lua functions used by lots of plugins
+  use { "nvim-lualine/lualine.nvim" }                          -- Bottom bar
+  use { "nvim-telescope/telescope.nvim" }                      -- Fuzzyfinder
+  use { "windwp/nvim-autopairs" }                              -- Autopairs, integrates with both cmp and treesitter
+  use { 'TimUntersberger/neogit' }                             -- Emacs but in vim
+  use { "folke/which-key.nvim" }                               -- The doom emacs key thing
+  use { "ellisonleao/gruvbox.nvim" }                           -- Sane colorsheme
+  -- use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Syntax highlighting
   use {
-    "folke/which-key.nvim",
-    config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup {
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      }
-    end
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+      ts_update()
+    end,
   }
-  use { "ellisonleao/gruvbox.nvim" } -- gruvbox
 
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "neovim/nvim-lspconfig/" }
+  use { "hrsh7th/cmp-nvim-lsp" }
+  use { "williamboman/mason.nvim" }
+  
 end)
