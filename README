@@ -1,0 +1,44 @@
+My Personalized Neovim Configuration
+
+General options and keymaps are done in the init.lua file, and plugin
+configuration is done in the lua/settings/ directory.
+
+Plugins are managed with packer. Here is a list of plugins:
+ - Project
+ - Bufferline
+ - Lualine
+ - Alpha
+ - Telescope
+ - CMP
+ - Lsp-Zero
+ - LuaSnip
+ - Treesitter
+
+Directory Structure
+
+├── after
+│   └── ftplugin
+│       ├── asm.vim
+│       ├── assembly.vim
+│       ├── html.erb.lua
+│       ├── html.lua
+│       ├── javascript.lua
+│       ├── lua.lua
+│       ├── ruby.lua
+│       ├── sql.lua
+│       ├── tex.lua
+│       └── typescript.lua
+├── init.lua
+├── lua
+│   └── settings
+│       ├── bufferline.lua
+│       ├── lsp.lua
+│       ├── lualine.lua
+│       ├── nvim-tree.lua
+│       ├── packer.lua
+│       ├── telescope.lua
+│       ├── treesitter.lua
+│       └── which-key.lua
+├── plugin
+│   └── packer_compiled.lua
+└── README
