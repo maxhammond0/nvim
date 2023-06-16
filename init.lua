@@ -162,6 +162,8 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 ------------------
 -- Load Plugins --
 ------------------
+require "settings.alpha"
+require "settings.autopairs"
 require "settings.bufferline"
 require "settings.lsp"
 require "settings.lualine"
