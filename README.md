@@ -2,7 +2,7 @@
 
 Plugin configuration is done in the lua/plugins/ directory, user configuration
 is done in the lua/config directory, the list of LSP servers are in the
-lua/lsp_servers directory and their respective settings can be found in the
+lua/servers directory and their respective settings can be found in the
 lua/settings directory
 
 ## List of plugins
