@@ -8,6 +8,9 @@ local M = {
 function M.config()
   require("bufferline").setup {
     options = {
+      close_command = "Bdelete! %d",       -- can be a string | function, see "Mouse actions"
+      right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
+      separator_style = "thin",
       numbers = 'none',
       diagnostics = 'nvim_lsp',
       seperator_style = 'slant' or 'padded_slant',
