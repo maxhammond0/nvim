@@ -42,7 +42,7 @@ function M.config()
     require("illuminate").on_attach(client)
   end
 
-  for _, server in pairs(require("lsp_servers").servers) do
+  for _, server in pairs(require("servers").servers) do
     Opts = {
       on_attach = on_attach,
       capabilities = capabilities,
