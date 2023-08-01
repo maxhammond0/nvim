@@ -5,6 +5,8 @@ M.servers = {
   "clangd",
   "solargraph",
   "hls",
+  "pyright",
+  "r-languageserver"
 }
 
 return M
