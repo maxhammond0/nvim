@@ -6,7 +6,8 @@ M.servers = {
   "solargraph",
   "hls",
   "pyright",
-  "r_language_server"
+  "r_language_server",
+  "jdtls"
 }
 
 return M
