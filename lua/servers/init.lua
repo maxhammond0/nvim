@@ -7,7 +7,8 @@ M.servers = {
   "hls",
   "pyright",
   "r_language_server",
-  "jdtls"
+  "jdtls",
+  "texlab"
 }
 
 return M
